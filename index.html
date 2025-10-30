@@ -1,1 +1,463 @@
-<h1>Ciao!</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CPSS 2026 - Cyber-Physical System Security Workshop</title>
+    <!-- Load Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui"],
+            },
+            colors: {
+              "acm-blue": "#3B82F6",
+              "acm-gray": "#E0E0E8",
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      /* Custom Styles for Specific Elements */
+      html {
+        scroll-behavior: smooth;
+      }
+      .section-header {
+        background-color: theme("colors.acm-gray");
+        padding: 0.5rem 1rem;
+        margin-top: 1.5rem;
+        border-radius: 0.5rem;
+        /* Add a subtle horizontal line above each section header */
+        border-top: 1px solid rgba(0,0,0,0.12);
+        padding-top: 0.75rem;
+      }
+      .date-label {
+        min-width: 12rem; /* Ensure the label column has enough space */
+        font-weight: 600;
+      }
+      .date-value {
+        color: rgb(109, 109, 109);
+      }
+      .strikethrough {
+        text-decoration: line-through;
+        color: #b4b4b4;
+        margin-right: 0.25rem;
+      }
+      .extended {
+        color: rgb(239, 68, 68); /* Tailwind red-500 */
+        font-weight: 700;
+      }
+      /* Custom List style to match the original document look */
+      .topics-list li {
+        list-style: disc;
+        margin-left: 1.5rem;
+        margin-bottom: 0.5rem;
+      }
+      .committee b {
+        display: block;
+        margin-top: 1rem;
+        margin-bottom: 0.5rem;
+        font-size: 1.125rem; /* text-lg */
+        font-weight: 700;
+        color: #1f2937; /* Gray-800 */
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-100 font-sans text-gray-800 antialiased">
+    <!-- Main Container: Max width 820px, Centered, Responsive Padding -->
+    <div class="max-w-4xl mx-auto p-4 lg:p-6 bg-white shadow-xl rounded-lg">
+      <!-- Header Block (Replaced nested table with Flexbox) -->
+      <header
+        class="flex items-center justify-between p-4 bg-acm-gray rounded-lg"
+      >
+        <!-- Left Logo -->
+        <div class="flex-shrink-0 w-1/6 hidden sm:block">
+          <!-- Placeholder image URL is used for the image until the user provides the actual file or URL -->
+          <a href="http://jianying.space/cpss/" class="block">
+            <img
+              src="./images/cpss.png"
+              alt="CPSS Logo"
+              class="mx-auto h-24 w-24 object-contain rounded-full"
+            />
+          </a>
+        </div>
+
+        <!-- Center Text -->
+        <div class="text-center flex-grow mx-2">
+          <h1
+            class="text-xl sm:text-2xl font-extrabold leading-tight text-gray-900"
+          >
+            12th ACM Cyber-Physical System Security Workshop (CPSS 2026)
+          </h1>
+          <h2 class="text-sm sm:text-lg font-medium mt-1">
+            held in conjunction with
+            <a
+              href="https://asiaccs2026.cse.iitkgp.ac.in/home/"
+              target="_blank"
+              class="text-acm-blue hover:text-blue-700 underline"
+              >ACM AsiaCCS'26</a
+            >
+            <br />
+            Bangalore, India
+          </h2>
+        </div>
+
+        <!-- Right Logo -->
+        <div class="flex-shrink-0 w-1/6 hidden sm:block">
+          <!-- Placeholder image URL is used for the image until the user provides the actual file or URL -->
+          <img
+            src="./images/logo_acmsigsac.png"
+            alt="ACM SIGSAC Logo"
+            class="mx-auto h-24 w-24 object-contain rounded-full"
+          />
+        </div>
+      </header>
+
+      <!-- Navigation Links (Responsive) -->
+      <nav
+        class="text-center my-6 text-sm sm:text-base font-semibold space-y-2 sm:space-y-0 sm:space-x-4 flex flex-wrap justify-center"
+      >
+        <a
+          href="#dates"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >Dates</a
+        >
+        <a href="#CFP" class="text-acm-blue hover:text-blue-700 hover:underline"
+          >CFP</a
+        >
+        <a
+          href="#organizers"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >Organizers</a
+        >
+        <a
+          href="#keynotes"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >Keynotes</a
+        >
+        <a
+          href="#accepted_papers"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >Accepted Papers</a
+        >
+        <a
+          href="#program"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >Program</a
+        >
+        <a
+          href="https://asiaccs2025.hust.edu.vn/registration/"
+          target="_blank"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >Registration</a
+        >
+        <a
+          href="https://asiaccs2025.hust.edu.vn/conference-venue/"
+          target="_blank"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >Venue</a
+        >
+        <a
+          href="#contact"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >Contact</a
+        >
+        <a
+          href="http://jianying.space/cpss/"
+          class="text-acm-blue hover:text-blue-700 hover:underline"
+          >CPSS Home</a
+        >
+      </nav>
+
+      <!-- 1. Important Dates Section -->
+      <div id="dates" class="section-header">
+        <h3 class="text-xl font-bold">Important Dates</h3>
+      </div>
+
+      <div class="p-4 space-y-4">
+        <!-- Round 1 Dates -->
+        <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
+          <h4 class="font-bold text-gray-900 mb-2">1st Round</h4>
+          <div class="space-y-2">
+            <div class="flex flex-col sm:flex-row sm:items-baseline">
+              <span class="date-label">Submissions Due:</span>
+              <span class="date-value font-bold">
+                <span>TBD</span>
+              </span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-baseline">
+              <span class="date-label">Notification:</span>
+              <span class="date-value">TBD</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-baseline">
+              <span class="date-label">Camera-ready Due:</span>
+              <span class="date-value">TBD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Round 2 Dates -->
+        <div class="p-3 bg-gray-50 rounded-lg border border-gray-200">
+          <h4 class="font-bold text-gray-900 mb-2">2nd Round</h4>
+          <div class="space-y-2">
+            <div class="flex flex-col sm:flex-row sm:items-baseline">
+              <span class="date-label">Submissions Due:</span>
+              <span class="date-value font-bold">
+                <span>TBD</span>
+              </span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-baseline">
+              <span class="date-label">Notification:</span>
+              <span class="date-value">TBD</span>
+            </div>
+            <div class="flex flex-col sm:flex-row sm:items-baseline">
+              <span class="date-label">Camera-ready Due:</span>
+              <span class="date-value">TBD</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Workshop Date -->
+        <div class="p-3 bg-acm-gray rounded-lg border border-gray-300">
+          <div class="flex flex-col sm:flex-row sm:items-baseline text-lg">
+            <span class="date-label font-bold text-gray-900"
+              >Workshop Date:</span
+            >
+            <span class="font-bold text-gray-900">2 June 2026</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 2. News Section -->
+      <div id="news" class="section-header">
+        <h3 class="text-xl font-bold">News</h3>
+      </div>
+
+      <div class="p-4 text-justify text-sm leading-relaxed space-y-2">
+        <p>
+          <!-- I've replaced multiple spans with P tags for better semantic structure -->
+          <span class="font-bold">30 October 2025:</span> The workshop website is up.
+        </p>
+      </div>
+
+      <!-- 3. Call for Papers Section -->
+      <div id="CFP" class="section-header">
+        <h3 class="text-xl font-bold">Call for Papers</h3>
+      </div>
+
+      <div class="p-4 text-justify text-sm leading-relaxed">
+        <p class="mb-4">
+          Cyber-Physical Systems (CPS) of interest to this workshop consist of
+          large-scale interconnected systems of heterogeneous components
+          interacting with their physical environments. There exist a multitude
+          of CPS devices and applications deployed to serve critical functions
+          in our lives thus making security an important non-functional
+          attribute of such systems. This workshop will provide a platform for
+          professionals from academia, government, and industry to discuss novel
+          ways to address the ever-present security challenges facing CPS. We
+          seek submissions describing theoretical and practical solutions to
+          security challenges in CPS. Submissions pertinent to the security of
+          embedded systems, IoT, SCADA, smart grid, and other critical
+          infrastructure are welcome. Topics of interest include, but are not
+          limited to:
+        </p>
+
+        <!-- Topics List (Replaced table structure with modern Flex/Grid list) -->
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-6">
+          <ul class="topics-list">
+            <li>Attack detection for CPS</li>
+            <li>Authentication and access control for CPS</li>
+            <li>Autonomous vehicle security</li>
+            <li>Availability and auditing for CPS</li>
+            <li>Blockchain for CPS security</li>
+            <li>Data security and privacy for CPS</li>
+            <li>Deception Technologies for CPS</li>
+            <li>Digital twins/Cyber range for CPS security</li>
+            <li>Embedded systems security</li>
+            <li>Formal methods in CPS</li>
+            <li>Industrial control system security</li>
+            <li>IoT security</li>
+          </ul>
+          <ul class="topics-list">
+            <li>Legacy CPS system protection</li>
+            <li>Lightweight crypto and security</li>
+            <li>Maritime cyber security</li>
+            <li>Recovery from cyber attacks</li>
+            <li>Security and risk assessment for CPS</li>
+            <li>Security architectures for CPS</li>
+            <li>Security by design for CPS</li>
+            <li>Smart grid security</li>
+            <li>Threat modeling for CPS</li>
+            <li>Transportation system security</li>
+            <li>Vulnerability analysis for CPS</li>
+            <li>Wireless sensor network security</li>
+          </ul>
+        </div>
+        <br />
+      </div>
+
+      <!-- 4. Submission Instructions Section -->
+      <div id="submission" class="section-header">
+        <h3 class="text-xl font-bold">Submission Instructions</h3>
+      </div>
+      <div class="p-4 text-justify text-sm leading-relaxed space-y-3">
+        <p>
+          <strong class="text-gray-900">1st round</strong> paper submission
+          link: TBD
+          <!-- <a
+            href="https://cpss2025.hotcrp.com/"
+            target="_b"
+            class="text-acm-blue hover:underline"
+            >https://cpss2025.hotcrp.com/</a
+          > -->
+        </p>
+        <p>
+          Submitted papers must not substantially overlap papers that have been
+          published or that are simultaneously submitted to a journal or a
+          conference with proceedings.
+          <strong class="text-gray-900"
+            >The review process is double-blinded. The submitted PDF version
+            should be anonymized.</strong
+          >
+          Submissions must be in double-column
+          <a
+            href="https://www.acm.org/special-interest-groups"
+            class="text-acm-blue hover:underline"
+            >ACM SIG Proceedings</a
+          >
+          format (See
+          <a
+            href="https://www.acm.org/publications/proceedings-template"
+            class="text-acm-blue hover:underline"
+            >here</a
+          >), and should not exceed 12 pages. Position papers describing the
+          work in progress and papers describing novel testbeds are also
+          welcome. Only pdf files will be accepted. Authors of accepted papers
+          must guarantee that their papers will be presented at the workshop. At
+          least one author of the paper must be registered at the appropriate
+          conference rate. Accepted papers will be published in the ACM Digital
+          Library.
+          <strong class="text-gray-900"
+            >There will also be a best paper award</strong
+          >.
+        </p>
+      </div>
+
+      <!-- 5. Organizers Section -->
+      <div id="organizers" class="section-header">
+        <h3 class="text-xl font-bold">Organizers</h3>
+      </div>
+      <div class="p-4 text-sm leading-relaxed committee">
+        <b>Steering Committee</b>
+        <p>Dieter Gollmann (Hamburg University of Technology, Germany)</p>
+        <p>Ravishankar Iyer (UIUC, USA)</p>
+        <p>Douglas Jones (UIUC, USA)</p>
+        <p>Javier Lopez (University of Malaga, Spain)</p>
+        <p>
+          <a
+            target="_blank"
+            href="http://jianying.space/"
+            class="text-acm-blue hover:underline"
+            >Jianying Zhou</a
+          >
+          (SUTD, Singapore) - Chair
+        </p>
+
+        <b>Program Chairs</b>
+        <p>Daniele Antonioli (EURECOM, France)</p>
+        <p>Martin Strohmeier (Armasuisse, Switzerland)</p>
+
+        <b>Publication Chair</b>
+        <p>Simon Birnbach (University of Oxford, UK)</p>
+
+        <b>Web and Publicity Chair</b>
+        <p>Denis Donadel (University of Verona, Italy)</p>
+
+        <b>Program Committee</b>
+        <p>Eyasu Getahun Chekole (SUTD, Singapore)</p>
+        <p>Saman Zonouz (Georgia Tech, USA)</p>
+        <p>Daisuke Mashima (SUTD, Singapore)</p>
+        <p>Chuadhry Mujeeb Ahmed (Newcastle University, UK)</p>
+        <p>Alessandro Brighente (University of Padova, Italy)</p>
+        <p>Sebastian Kohler (University of Oxford, UK)</p>
+        <p>Massimo Merro (University of Verona, Italy)</p>
+        <p>Alessandro Erba (KIT, Germany)</p>
+        <p>Cristina Alcaraz (University of Malaga, Spain) </p>
+        <p>Nils Tippenhauer (CISPA, Germany)</p>
+        <p>Ali Abbasi (CISPA, Germany)</p>
+        <p>John H. Castellanos (NEC, Germany)</p>
+        <p>Clement Fung (CMU, USA)</p>
+        <p>Luis Burbano (UCSC, USA)</p>
+        <p>Aurélien Francillon (EURECOM, France)</p>
+      </div>
+
+      <!-- 6. Keynotes Section -->
+      <div id="keynotes" class="section-header">
+        <h3 class="text-xl font-bold">Keynotes</h3>
+      </div>
+
+      <div class="p-4 space-y-8">
+        TBD
+      </div>
+
+      <!-- 7. Accepted Papers Section -->
+      <div id="accepted_papers" class="section-header">
+        <h3 class="text-xl font-bold">Accepted Papers</h3>
+      </div>
+
+      <div class="p-4 space-y-8">
+        TBD
+      </div>
+
+      <!-- 8. Program Section -->
+      <div id="program" class="section-header">
+        <h3 class="text-xl font-bold">Program</h3>
+      </div>
+
+      <div class="p-4">
+        <!-- Program Schedule (Refactored from nested table to modern Flexbox) -->
+        <div class="space-y-4">
+          TBD
+        </div>
+      </div>
+
+      <!-- 9. Contact Section -->
+      <div id="contact" class="section-header">
+        <h3 class="text-xl font-bold">Contact</h3>
+      </div>
+      <div class="p-4 text-sm leading-relaxed">
+        <p class="mb-2">
+          <strong class="font-bold">Email:</strong>
+          <a
+            href="mailto:antonioli.daniele@gmail.com"
+            class="text-acm-blue hover:underline"
+            > antonioli.daniele@gmail.com </a
+          >
+          and
+          <a
+            href="mailto:martin.strohmeier@armasuisse.ch"
+            class="text-acm-blue hover:underline"
+            >martin.strohmeier@armasuisse.ch</a
+          >
+        </p>
+        <p>
+          <strong class="font-bold">CPSS Home:</strong>
+          <a
+            href="http://jianying.space/cpss/"
+            target="_blank"
+            class="text-acm-blue hover:underline"
+            >http://jianying.space/cpss/</a
+          >
+        </p>
+
+        <hr class="my-4 border-t border-gray-300" />
+        <em class="text-gray-500">Updated: Oct 30, 2025</em>
+      </div>
+    </div>
+  </body>
+</html>
