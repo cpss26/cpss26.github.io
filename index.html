@@ -118,16 +118,18 @@
         </div>
       </header>
 
-      <!-- Navigation Links (Responsive) -->
+      <!-- Navigation Links (Responsive) --> 
       <nav
-        class="text-center my-6 text-sm sm:text-base font-medium space-y-2 sm:space-y-0 sm:space-x-3 flex flex-wrap justify-center"
+        class="text-center my-6 text-sm sm:text-base font-medium space-x-4 flex flex-wrap justify-center"
       >
+      
         <a
           href="#dates"
           class="text-acm-blue hover:text-blue-700 hover:underline"
           >Dates</a
         >
-        <a href="#CFP" class="text-acm-blue hover:text-blue-700 hover:underline"
+        <a href="#CFP" 
+          class="text-acm-blue hover:text-blue-700 hover:underline"
           >CFP</a
         >
         <a
@@ -239,8 +241,9 @@
 
       <div class="p-4 text-justify text-sm leading-relaxed space-y-2">
         <p>
-          <!-- I've replaced multiple spans with P tags for better semantic structure -->
-           <span class="font-bold">November 25, 2025:</span> First round deadlines are announced.
+          <span class="font-bold">November 25, 2025:</span> Submission deadline announced.
+        </p>
+        <p>
           <span class="font-bold">October 30, 2025:</span> The workshop website is up.
         </p>
       </div>
@@ -365,15 +368,72 @@
           (SUTD, Singapore) - Chair
         </p>
 
-        <b>Program Chairs</b>
-        <p>Daniele Antonioli (EURECOM, France)</p>
-        <p>Martin Strohmeier (Armasuisse, Switzerland)</p>
-
-        <b>Publication Chair</b>
-        <p>Simon Birnbach (University of Oxford, UK)</p>
-
-        <b>Web and Publicity Chair</b>
-        <p>Denis Donadel (University of Verona, Italy)</p>
+        <div class="w-full mb-2">
+            <b class="text-lg">Program Chairs</b>
+        </div>
+        <div class="flex flex-wrap items-start">
+          <div class="flex flex-col items-center w-32 mr-4">
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden bg-gray-100">
+              <img src="./images/daniele.png" alt="Daniele Antonioli" class="w-full h-full object-cover" />
+            </div>
+            <p class="mt-2 text-center text-sm mb-2">
+              <a 
+              target = "_blank"
+              href="https://francozappa.github.io/"
+              class="text-acm-blue hover:underline"
+            >Daniele Antonioli</a>
+            (EURECOM, France)
+            </p>
+          </div>
+          <div class="flex flex-col items-center w-32">
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden bg-gray-100">
+              <img src="./images/martin.jpeg" alt="Martin Strohmeier" class="w-full h-full object-cover" />
+            </div>
+            <p class="mt-2 text-center text-sm">
+              <a
+                target = "_blank"
+                href="https://mstrohmeier.net/"
+                class="text-acm-blue hover:underline"
+              >Martin Strohmeier</a>
+              (Armasuisse, Switzerland)
+            </p>
+          </div>
+        </div>
+             
+        <div class="flex flex-wrap items-start">
+          <div class="flex flex-col items-center w-32 mr-4">
+            <div class="mb-2">
+              <b class="text-lg">Publication Chair</b>
+            </div>
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden bg-gray-100">
+              <img src="./images/simon.jpg" alt="Simon Birnbach" class="w-full h-full object-cover" />
+            </div>
+            <p class="mt-2 text-center text-sm">
+              <a 
+              target = "_blank"
+              href="https://www.cs.ox.ac.uk/people/simon.birnbach/"
+              class="text-acm-blue hover:underline"
+            >Simon Birnbach</a> 
+            (University of Oxford, UK)
+            </p>
+          </div>
+          <div class="flex flex-col items-center w-32">
+            <div class="mb-2">
+              <b class="text-lg">Web and Publicity Chair</b>
+            </div>
+            <div class="w-24 h-24 sm:w-32 sm:h-32 rounded-lg overflow-hidden bg-gray-100">
+              <img src="./images/denis.jpg" alt="Denis Donadel" class="w-full h-full object-cover" />
+            </div>
+            <p class="mt-2 text-center text-sm">
+              <a 
+              target = "_blank"
+              href="https://donadelden.github.io/"
+              class="text-acm-blue hover:underline"
+            >Denis Donadel</a>
+            (University of Verona, Italy)
+            </p>
+          </div>
+        </div>
 
         <b>Program Committee</b>
         <p>Eyasu Getahun Chekole (SUTD, Singapore)</p>
