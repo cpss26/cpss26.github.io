@@ -139,9 +139,9 @@
           >Organizers</a
         >
         <a
-          href="#keynotes"
+          href="#keynote"
           class="text-acm-blue hover:text-blue-700 hover:underline"
-          >Keynotes</a
+          >Keynote</a
         >
         <a
           href="#accepted_papers"
@@ -227,9 +227,7 @@
         <!-- Workshop Date -->
         <div class="p-3 bg-acm-gray rounded-lg border border-gray-300">
           <div class="flex flex-col sm:flex-row sm:items-baseline text-lg">
-            <span class="date-label font-bold text-gray-900"
-              >Workshop Date:</span
-            >
+            <span class="date-label font-bold text-gray-900">Workshop Date:</span>
             <span class="font-bold text-gray-900">June 2nd, 2026</span>
           </div>
         </div>
@@ -243,10 +241,13 @@
       <div class="p-4 text-justify text-sm leading-relaxed space-y-2">
 
         <p>
-          <span class="font-bold">March 23, 2026:</span> Registration information are available on the <a href="https://asiaccs2026.cse.iitkgp.ac.in/registration/" target="_blank" class="text-acm-blue hover:text-blue-700 hover:underline">conference website</a>.
+          <span class="font-bold">March 24, 2026:</span> Aanjhan Ranganathan will be giving the <a href="#keynote" class="text-acm-blue hover:text-blue-700 hover:underline">keynote talk</a> at CPSS 2026!
         </p>
         <p>
-          <span class="font-bold">March 16, 2026:</span> <a href="#accepted_papers" class="text-acm-blue hover:underline">Accepted papers</a> have been announced. Congratulations to all the authors!
+          <span class="font-bold">March 23, 2026:</span> Registration information are available on the <a href="https://asiaccs2026.cse.iitkgp.ac.in/registration/" target="_blank" class="text-acm-blue hover:text-blue-700 hover:underline">conference website</a>. Early registrations goes until April 22, 2026. 
+        </p>
+        <p>
+          <span class="font-bold">March 16, 2026:</span> <a href="#accepted_papers" class="text-acm-blue  hover:text-blue-700  hover:underline">Accepted papers</a> have been announced. Congratulations to all the authors!
         </p>
         <p>
           <span class="font-bold">January 25, 2026:</span> Submission deadline extended.
@@ -468,13 +469,37 @@
         <p>Harshad Sathaye (ETH Zurich, Switzerland)</p>
       </div>
 
-      <!-- 6. Keynotes Section -->
-      <div id="keynotes" class="section-header">
-        <h3 class="text-xl font-bold">Keynotes</h3>
+      <!-- 6. Keynote Section -->
+      <div id="keynote" class="section-header">
+        <h3 class="text-xl font-bold">Keynote</h3>
       </div>
 
       <div class="p-4 space-y-8">
-        TBD
+        <div class="flex flex-col gap-6">
+          <!-- Speaker Information -->
+          <div>
+            
+            <h4 class="font-bold text-gray-900 mb-2 text-xl">Fragile Links, Resilient Systems: Toward Trusted Autonomy at Swarm-Scale</h4>
+            
+            <p class="font-bold text-lg text-gray-900 mb-2">Aanjhan Ranganathan</p>
+            <p class="text-sm text-gray-700 italic mb-4">Associate Professor, Khoury College of Computer Sciences, Northeastern University, Boston, USA</p>
+
+        <p class="text-sm text-gray-700 text-justify mb-4">
+          Autonomous systems, from drone swarms in the air to connected vehicles on the road, depend on fragile, invisible links: GPS for navigation and wireless networks such as 5G and sidelink for communication. When these links are spoofed, jammed, or degraded, the impact extends far beyond protocols and threatens the reliability of entire systems. In this talk, I will present our recent work on evaluating how adversarial conditions at the navigation and communication layers propagate into system-level failures. I will introduce PRISM, a swarm experimentation platform that integrates GPS, communications, and flight stacks to capture the cyber-physical consequences of attacks, and Dyna5G, a dynamic testbed for studying adversarial scenarios in next-generation cellular networks. Together, these platforms enable us to move from single-drone GPS spoofing demonstrations to swarm-scale analyses, to assess communication fragility in connected vehicles, and to study how protocols and algorithms behave under realistic wireless impairments. I will conclude with a forward-looking vision for trusted autonomy: developing resilient systems that can adapt and degrade gracefully, even when their foundational links are under attack.
+        </p>
+        
+        <div class="flex flex-col sm:flex-row gap-6 items-start">
+          <p class="text-sm text-gray-700 text-justify flex-grow">
+            <span class="font-bold">Bio:</span> Aanjhan Ranganathan is an Associate Professor in the Khoury College of Computer Sciences at Northeastern University in Boston, USA, where he leads the Signal Intelligence Lab. He is currently on sabbatical at ETH Zurich. His research focuses on wireless security, cyber-physical systems, and autonomous swarms, emphasizing both the analysis of adversarial conditions in navigation and communication infrastructures and the development of robust, secure systems to enhance real-world autonomy. He is a recipient of several awards, including the outstanding dissertation award from ETH Zurich, regional winner of the European Space Agency's Satellite Navigation competition, and NSF CAREER awards. His research has been generously funded by the NSF, Office of Naval Research, U.S. Army Combat Capabilities Development Command Army Research Laboratory, Armasuisse, Google, and Amazon.
+          </p>
+          <div class="flex-shrink-0">
+            <div class="w-32 h-40 sm:w-40 sm:h-48 rounded-lg overflow-hidden bg-gray-100">
+          <img src="./images/aanjhan.jpg" alt="Aanjhan Ranganathan" class="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+          </div>
+        </div>
       </div>
 
       <!-- 7. Accepted Papers Section -->
@@ -558,7 +583,7 @@
         </p>
 
         <hr class="my-4 border-t border-gray-300" />
-        <em class="text-gray-500">Updated: March 23, 2026.</em>
+        <em class="text-gray-500">Updated: March 24, 2026.</em>
       </div>
     </div>
   </body>
